@@ -9,12 +9,26 @@ jobs:
 
   build-and-push:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
 
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Check Runner
+        run: |
+          echo "Running on:"
+          hostname
+
+          echo "OS:"
+          cat /etc/redhat-release
+
+          echo "Docker:"
+          docker --version
+
+          echo "Python:"
+          python3 --version
 
       - name: Setup Python
         uses: actions/setup-python@v5
