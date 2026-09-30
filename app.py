@@ -41,7 +41,7 @@ def home():
         </head>
 
         <body>
-            <h1>IT Monitoring Dashboard</h1>
+            <h1>IT Monitoring Dashboard - CI/CD TEST</h1>
 
             <h2>Server Status</h2>
 
